@@ -1,0 +1,14 @@
+{
+  "name": "steal-sw-example",
+  "version": "0.0.1",
+  "description": "PWA with StealJS and CanJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "StealJS"
+  ],
+  "author": "Julian Kern",
+  "license": "MIT"
+}

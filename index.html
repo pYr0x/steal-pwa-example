@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-gap: 15px;
+        }
+        .header {
+            grid-column: 2;
+        }
+        .footer {
+            grid-column: 1 / 3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid">
+    <header class="header">StealJS PWA</header>
+    <aside class="sidebar">Sidebar</aside>
+    <article class="content">
+        <h1>2 column, header and footer</h1>
+        <p>This example uses line-based positioning, to position the header and footer, stretching them across the
+            grid.</p>
+    </article>
+    <footer class="footer">My footer Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur cum delectus deserunt, doloremque est itaque libero magnam minus nulla placeat quasi voluptas voluptatum! Doloribus iste laudantium nulla odit officia!</footer>
+</div>
+
+</body>
+</html>
