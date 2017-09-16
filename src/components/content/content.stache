@@ -1,0 +1,6 @@
+{{#if contentPromise.isResolved}}
+    {{#each contentPromise.value as content}}
+        <h2>{{content.headline}}</h2>
+        {{{content.content}}}
+    {{/each}}
+{{/if}}

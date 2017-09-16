@@ -1,0 +1,15 @@
+{
+  "title": "Home",
+  "data": [
+    {
+      "id": 1,
+      "headline": "What do you see?",
+      "content": "<p>You see a simple example of a progressive web app (pwa) built with StealJS and CanJS.</p>\n<p>Thanks to Steal-Tools we can create a minified and bundles version of your app, <strong>ready to deploy!</strong></p>"
+    },
+    {
+      "id": 2,
+      "headline": "Key features?",
+      "content": "<ol>\n    <li>fully PWA</li>\n    <li>Used autorendered content without serverside rendering</li>\n    <li>Basic concept of using components</li>\n    <li>Simple routing</li>\n    <li>Offline support, thanks to service-worker</li>\n    <li>Install the app at your homescreen</li>\n    <li>built and bundled with steal-tools</li>\n</ol>"
+    }
+  ]
+}

@@ -1,35 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>StealJS PWA</title>
+    <meta name="description" content="StealJS PWA example">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        .grid {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            grid-gap: 15px;
-        }
-        .header {
-            grid-column: 2;
-        }
-        .footer {
-            grid-column: 1 / 3;
-        }
-    </style>
+    <link rel="preload" href="src/styles.css" as="style">
+
 </head>
 <body>
 
-<div class="grid">
-    <header class="header">StealJS PWA</header>
-    <aside class="sidebar">Sidebar</aside>
-    <article class="content">
-        <h1>2 column, header and footer</h1>
-        <p>This example uses line-based positioning, to position the header and footer, stretching them across the
-            grid.</p>
-    </article>
-    <footer class="footer">My footer Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur cum delectus deserunt, doloremque est itaque libero magnam minus nulla placeat quasi voluptas voluptatum! Doloribus iste laudantium nulla odit officia!</footer>
-</div>
+...loading
 
+<script src="node_modules/steal/steal-sans-promises.js" main="steal-pwa-example/index.stache!done-autorender/no-zone"></script>
 </body>
 </html>
