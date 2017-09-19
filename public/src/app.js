@@ -7,7 +7,7 @@ import "can-stache-bindings";
 import steal from "@steal";
 import loader from "@loader";
 
-import './models/fixtures/contents';
+//import './models/fixtures/contents';
 
 const AppViewModel = DefineMap.extend('App', {
 
@@ -35,12 +35,12 @@ const AppViewModel = DefineMap.extend('App', {
     if(loader.getEnv() === "development"){
       return steal.joinURIs(loader.baseURL, loader.directories.lib + "/assets/"+ asset);
     }else{
-      return steal.joinURIs(loader.baseURL, "dist/assets/"+ asset);
+      return steal.joinURIs(loader.baseURL, loader.directories.lib + "/assets/"+ asset);
     }
   }
 });
 
-route.bindings.pushstate.root = "/steal-sw-example/";
+route.bindings.pushstate.root = "/";
 route('{page}');
 
 export default AppViewModel;

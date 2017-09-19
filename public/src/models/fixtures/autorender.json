@@ -1,0 +1,10 @@
+{
+  "title": "Done-Autorender",
+  "data": [
+    {
+      "id": 1,
+      "headline": "",
+      "content": "<p>Done-Autorender renders a stache template on server side (SSR) as well on the client side. We use done-autorender in this example app in combination with StealJS <br>\n    <code>&#60;script src=\"node_modules/steal/steal-sans-promises.js\" main=\"steal-pwa-example/index.stache!done-autorender/no-zone\"&#62;</code>.</p>\n<p>Done-Autorender:\n<ul>\n    <li>renders the main stache template</li>\n    <li>inject header and body into the current page</li>\n    <li>handles the App-State we used for routing <code>&#60;can-import from=\"~/app\" export-as=\"viewModel\"/&#62;</code></li>\n</ul>\n</p>"
+    }
+  ]
+}
