@@ -1,0 +1,20 @@
+{
+  "title": "Service-Worker",
+  "data": [
+    {
+      "id": 1,
+      "headline": "Caching static files",
+      "content": "<p>Caching your static javascript files, styles and images</p>"
+    },
+    {
+      "id": 2,
+      "headline": "Caching URLs on runtime",
+      "content": "<p>Perfect for dynamic served webpages with PHP or Nodejs (Express)</p>"
+    },
+    {
+      "id": 3,
+      "headline": "caching the API calls",
+      "content": "<p>With runtime caching you can cache your API calls too!</p>"
+    }
+  ]
+}
