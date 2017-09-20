@@ -2,6 +2,7 @@ import Component from "can-component";
 import DefineMap from "can-define/map/map";
 import ajax from "can-ajax";
 
+import "./content.css";
 import template from "./content.stache";
 
 const ViewModel = DefineMap.extend('ContentVM', {

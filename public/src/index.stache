@@ -8,14 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<can-import from="~/styles.css"/>
 <can-import from="~/app" export-as="viewModel"/>
 
 <div class="grid">
     <header class="header"><h1>{{title}}</h1></header>
     <nav class="sidebar">
         <h2>
-            <a href="/steal-sw-example/"><img src="{{asset("burger.svg")}}" alt="-" height="15px"> Menu</a>
+            <a href="/steal-pwa-example/"><img src="{{asset("burger.svg")}}" alt="-" height="15px"> Menu</a>
         </h2>
         <ul>
             <li><a href="{{routeUrl(page='home')}}">Home</a></li>
@@ -25,26 +24,14 @@
     </nav>
     <article class="content">
 
-                <can-import from="~/components/content/">
-                    {{#if isResolved}}
-                        <x-content vm:app:from="../this" vm:page:from="page"></x-content>
+        <can-import from="~/components/content/">
+            {{#if isResolved}}
+                <x-content vm:app:from="../this" vm:page:from="page"></x-content>
 
-                        <!--{{#switch page}}-->
-                            <!--{{#case default}}-->
-                                <!--<x-content vm:app:from="../." page="home" title="Home"></x-content>-->
-                            <!--{{/case}}-->
-                            <!--{{#case "home"}}-->
-                                <!--<x-content vm:app:from="../." page="home" title="Home"></x-content>-->
-                            <!--{{/case}}-->
-                            <!--{{#case "done-autorender"}}-->
-                                <!--<x-content vm:app:from="../." page="autorender" title="Done-Autorender"></x-content>-->
-                            <!--{{/case}}-->
-                        <!--{{/switch}}-->
-
-                    {{else}}
-                        Loading...
-                    {{/if}}
-                </can-import>
+            {{else}}
+                Loading...
+            {{/if}}
+        </can-import>
     </article>
     <footer class="footer">handmade with StealJS and CanJS</footer>
 </div>

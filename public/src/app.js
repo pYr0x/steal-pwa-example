@@ -32,11 +32,7 @@ const AppViewModel = DefineMap.extend('App', {
   },
 
   asset: function (asset) {
-    if(loader.getEnv() === "development"){
-      return steal.joinURIs(loader.baseURL, loader.directories.lib + "/assets/"+ asset);
-    }else{
-      return steal.joinURIs(loader.baseURL, loader.directories.lib + "/assets/"+ asset);
-    }
+    return steal.joinURIs(loader.baseURL, loader.directories.lib + "/assets/"+ asset);
   }
 });
 

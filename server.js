@@ -1,9 +1,12 @@
 const express = require('express');
+const ejs = require('ejs');
 const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
+const env = process.env.NODE_ENV;
+const appPackage = require('./public/package.json');
 
 app.listen(port, () => {
     console.log('We are live on ' + port);
@@ -23,7 +26,24 @@ app.get('/contents/:page', (req, res) => {
 });
 
 app.use('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    ejs.renderFile(path.join(__dirname, 'templates','index.ejs'),
+        {
+            env: env,
+            /** A helper that we can use your assets or styles depend on the env **/
+            directoriesLib: function (file) {
+                let path = "/"+appPackage.steal.directories.lib+"/"+file;
+
+                if(env === "production"){
+                    // rewrite to the dist folder because we use "bundleAssets" on steal-tools
+                    return "/dist"+path;
+                }else{
+                    return path;
+                }
+            }
+        },
+        function(err, data) {
+            res.send(data);
+    });
 });
 
 

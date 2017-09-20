@@ -1,21 +1,31 @@
+const {promisify} = require('util');
+
 const stealTools = require("steal-tools");
 const path = require("path");
+const rimraf = require("rimraf");
 const precache = require("steal-serviceworker");
 
-const buildPromise = stealTools.build({
-    config: path.join(__dirname, "package.json!npm")
-}, {
-    bundleAssets: {
-        glob: [
-            path.join(__dirname, "src", "assets", "**", "*")
-        ]
-    },
-    bundleSteal: false,
-    minify: false,
-    bundlePromisePolyfill: false
+const rimrafPromisfy = promisify(rimraf);
 
-}).then((buildResult) => {
-    precache(buildResult, {
+
+async function build() {
+    await rimrafPromisfy("dist/**/*");
+
+    let buildResult = await stealTools.build({
+        config: path.join(__dirname, "package.json!npm")
+    }, {
+        bundleAssets: {
+            glob: [
+                path.join(__dirname, "src", "assets", "**", "*"),
+                path.join(__dirname, "src", "styles.css")
+            ]
+        },
+        bundleSteal: false,
+        minify: false,
+        bundlePromisePolyfill: false
+    });
+
+    await precache(buildResult, {
         staticFileGlobs: [
             path.join(__dirname, "dist", '**', '*.*')
         ],
@@ -27,4 +37,6 @@ const buildPromise = stealTools.build({
             handler: "networkFirst"
         }]
     });
-});
+}
+
+build();
