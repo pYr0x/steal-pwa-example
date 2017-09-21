@@ -22,7 +22,7 @@ async function build() {
             ]
         },
         bundleSteal: false,
-        minify: false,
+        minify: true,
         bundlePromisePolyfill: false
     });
 

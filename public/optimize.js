@@ -23,7 +23,7 @@ async function build() {
         },
         //bundleSteal: false,
         minify: false,
-        bundlePromisePolyfill: false,
+        //bundlePromisePolyfill: false,
         splitLoader: false
     });
 

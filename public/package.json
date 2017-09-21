@@ -34,7 +34,8 @@
     "main": "steal-pwa-example/index.stache!done-autorender/no-zone",
     "plugins": [
       "steal-stache",
-      "steal-css"
+      "steal-css",
+      "done-autorender"
     ],
     "npmIgnore": [
       "steal-tools"

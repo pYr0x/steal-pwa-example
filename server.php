@@ -27,6 +27,15 @@ function directoriesLib($file)
     return $lib . $file;
 }
 
+function manifestParam($param){
+    $manifest = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/public/src/manifest.json"), true);
+    if(isset($manifest[$param])){
+        return $manifest[$param];
+    }else{
+        return false;
+    }
+}
+
 
 /**
  * Start routing

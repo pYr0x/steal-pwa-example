@@ -39,6 +39,14 @@ app.use('/*', (req, res) => {
                 }else{
                     return path;
                 }
+            },
+            manifestParam: function (param) {
+                const manifest = require('./public/src/manifest.json');
+                if(manifest[param]){
+                    return manifest[param];
+                }else{
+                    return false;
+                }
             }
         },
         function(err, data) {
