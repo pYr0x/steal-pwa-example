@@ -9,6 +9,8 @@
 
     <link rel="preload" href="<%= directoriesLib('styles.css') %>" as="style">
     <link rel="stylesheet" href="<%= directoriesLib('styles.css') %>">
+
+    <link rel="manifest" href="<%= directoriesLib('manifest.json') %>">
 </head>
 <body>
 
@@ -17,7 +19,8 @@
 
 <% if (env === "production") { %>
 
-<script src="/dist/steal-sans-promises.production.js"></script>
+<!--<script src="/dist/steal-sans-promises.production.js"></script>-->
+<script src="/dist/bundles/steal-pwa-example/index.js" async></script>
 
 <% } else { %>
 

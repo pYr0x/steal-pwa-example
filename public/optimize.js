@@ -11,7 +11,7 @@ const rimrafPromisfy = promisify(rimraf);
 async function build() {
     await rimrafPromisfy("dist/**/*");
 
-    let buildResult = await stealTools.build({
+    let buildResult = await stealTools.optimize({
         config: path.join(__dirname, "package.json!npm")
     }, {
         bundleAssets: {
@@ -21,12 +21,13 @@ async function build() {
                 path.join(__dirname, "src", "manifest.json")
             ]
         },
-        bundleSteal: false,
+        //bundleSteal: false,
         minify: false,
-        bundlePromisePolyfill: false
+        bundlePromisePolyfill: false,
+        splitLoader: false
     });
 
-    await precache(buildResult, {
+    /*await precache(buildResult, {
         staticFileGlobs: [
             path.join(__dirname, "dist", '**', '*.*')
         ],
@@ -37,7 +38,7 @@ async function build() {
             urlPattern: "contents/:page",
             handler: "networkFirst"
         }]
-    });
+    });*/
 }
 
 build();

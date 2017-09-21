@@ -1,0 +1,35 @@
+{
+  "name": "StealJS PWA",
+  "short_name": "StealJS PWA",
+  "start_url": "/",
+  "background_color": "#f1f1f1",
+  "theme_color": "#673ab8",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/dist/src/assets/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": 1.5
+    },
+    {
+      "src": "/dist/src/assets/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": 2
+    },
+    {
+      "src": "/dist/src/assets/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": 3
+    },
+    {
+      "src": "/dist/src/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": 4
+    }
+  ]
+}
