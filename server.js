@@ -1,3 +1,4 @@
+const compression = require('compression');
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
@@ -11,6 +12,8 @@ const appPackage = require('./public/package.json');
 app.listen(port, () => {
     console.log('We are live on ' + port);
 });
+
+app.use(compression());
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
