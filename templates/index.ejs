@@ -7,8 +7,12 @@
     <meta name="description" content="StealJS PWA example">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="theme-color" content="<%= manifestParam('theme_color') %>"/>
+
     <link rel="preload" href="<%= directoriesLib('styles.css') %>" as="style">
     <link rel="stylesheet" href="<%= directoriesLib('styles.css') %>">
+
+    <link rel="manifest" href="<%= directoriesLib('manifest.json') %>">
 </head>
 <body>
 
@@ -18,6 +22,8 @@
 <% if (env === "production") { %>
 
 <script src="/dist/steal-sans-promises.production.js"></script>
+<!--<script src="/dist/bundles/steal-pwa-example/index.js" async></script>-->
+<!--<script src="/dist/bundles/steal-pwa-example/components/content/content.js" async></script>-->
 
 <% } else { %>
 

@@ -1,7 +1,7 @@
 import DefineMap from "can-define/map/map";
 import route from 'can-route';
 import "can-route-pushstate";
-import stache from "can-stache";
+//import stache from "can-stache";
 import "can-stache/helpers/route";
 import "can-stache-bindings";
 import steal from "@steal";
