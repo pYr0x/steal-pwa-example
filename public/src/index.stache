@@ -6,7 +6,7 @@
     <title>StealJS PWA</title>
     <meta name="description" content="StealJS PWA example">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#673ab8"/>
+    <meta name="theme-color" content="#484848"/>
 </head>
 <body>
 <can-import from="~/app" export-as="viewModel"/>
