@@ -38,7 +38,8 @@ app.use('/*', (req, res) => {
 
                 if(env === "production"){
                     // rewrite to the dist folder because we use "bundleAssets" on steal-tools
-                    return "/dist"+path;
+                    //return "/dist"+path;
+                    return path;
                 }else{
                     return path;
                 }

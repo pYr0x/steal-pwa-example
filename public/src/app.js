@@ -7,6 +7,9 @@ import "can-stache-bindings";
 import steal from "@steal";
 import loader from "@loader";
 
+import path from "path";
+import url from "url";
+
 //import './models/fixtures/contents';
 
 const AppViewModel = DefineMap.extend('App', {
@@ -32,7 +35,9 @@ const AppViewModel = DefineMap.extend('App', {
   },
 
   asset: function (asset) {
-    return steal.joinURIs(loader.baseURL, loader.directories.lib + "/assets/"+ asset);
+    //debugger;
+    return path.join(loader.directories.lib + "/assets/"+ asset);
+    //return steal.joinURIs(loader.baseURL, loader.directories.lib + "/assets/"+ asset);
   }
 });
 
